@@ -1,0 +1,53 @@
+/* global */
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* header */
+header{
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#navbarMovie.navbar-nav{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+#navbarMovie .nav-item::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    /* #fbbd61,#ec7532 */
+    /* to right
+    bắt đầu cam nhạt (left)
+    kết thúc cam đậm (right) */
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    display: block;
+    
+    transition: all 0.5s;
+}
+#navbarMovie .nav-item:hover:after{
+    width: 100%;
+    box-shadow: 0 0 20px 0 #fbbd61;
+}
+
+/* carousel */
+#carouselContent .carousel-caption{
+    text-align: left;
+    /* căn giữa nội dung thẻ absolute */
+    top: 50%;
+    left: 50%;
+    /* translate của thẻ con  */
+    transform: translate(-50%,-50%);
+}
+.newIn__content img{
+    width: 100%;
+}
+@media screen and (max-width: 575.98px) {
+    #myTabContent img{
+        width: 100%;
+    }
+}
